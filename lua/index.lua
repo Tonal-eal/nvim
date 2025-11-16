@@ -14,12 +14,12 @@ return {
     end,
   },
   "kana/vim-textobj-user",
-	{ "kana/vim-textobj-entire", dependencies = "kana/vim-textobj-user" },
-	{ "kana/vim-textobj-line", dependencies = "kana/vim-textobj-user" },
-	{
-		"kana/vim-textobj-indent",
-		dependencies = "kana/vim-textobj-user",
-	},
+  { "kana/vim-textobj-entire", dependencies = "kana/vim-textobj-user" },
+  { "kana/vim-textobj-line", dependencies = "kana/vim-textobj-user" },
+  {
+    "kana/vim-textobj-indent",
+    dependencies = "kana/vim-textobj-user",
+  },
   "nvzone/volt",
   "nvzone/menu",
   { "nvzone/minty", cmd = { "Huefy", "Shades" } },
@@ -30,7 +30,6 @@ return {
       return { override = require "nvchad.icons.devicons" }
     end,
   },
-
   {
     "lukas-reineke/indent-blankline.nvim",
     event = "User FilePost",
@@ -56,12 +55,6 @@ return {
       return require "nvchad.configs.nvimtree"
     end,
   },
-   -- formatting!
-  {
-    "stevearc/conform.nvim",
-    opts = require "config.conform"
-  },
-
   -- git stuff
   {
     "lewis6991/gitsigns.nvim",
@@ -79,15 +72,6 @@ return {
       return require "nvchad.configs.mason"
     end,
   },
-
-  {
-    "neovim/nvim-lspconfig",
-    event = "User FilePost",
-    config = function()
-      require "config.lspconfig"
-    end,
-  },
-
   -- load luasnips + cmp related in insert mode only
   {
     "hrsh7th/nvim-cmp",
@@ -126,8 +110,8 @@ return {
         "hrsh7th/cmp-nvim-lua",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
-        "https://codeberg.org/FelipeLema/cmp-async-path.git"
-      }
+        "https://codeberg.org/FelipeLema/cmp-async-path.git",
+      },
     },
     opts = function()
       return require "nvchad.configs.cmp"
@@ -142,7 +126,9 @@ return {
       return require "nvchad.configs.telescope"
     end,
   },
-
+  {
+    "tpope/vim-repeat",
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPost", "BufNewFile" },
@@ -155,5 +141,4 @@ return {
       require("nvim-treesitter.configs").setup(opts)
     end,
   },
-
 }

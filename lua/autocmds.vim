@@ -15,3 +15,4 @@ if exists('$TMUX')
 endif
 autocmd BufRead,BufNewFile *.v :Copilot disable
 autocmd BufRead,BufNewFile *.v setfiletype verilog
+au BufRead,BufNewFile *.sls set filetype=scheme

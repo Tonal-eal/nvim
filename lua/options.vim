@@ -26,6 +26,7 @@ set noerrorbells
 set number
 set autoread
 set novisualbell
+set clipboard+=unnamedplus
 " set shiftwidth=4 softtabstop=4 tabstop=4 expandtab smarttab
 set nocompatible
 set so=7
