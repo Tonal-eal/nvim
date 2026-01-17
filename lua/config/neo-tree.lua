@@ -4,8 +4,6 @@ vim.cmd [[ let g:neo_tree_remove_legacy_commands = 1 ]]
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
-local keymap = vim.keymap.set
-keymap("n", "<Space>e", "<cmd>Neotree toggle<cr>")
 local config = {
   -- If a user has a sources list it will replace this one.
   -- Only sources listed here will be loaded.
@@ -22,7 +20,6 @@ local config = {
   -- popup_border_style is for input and confirmation dialogs.
   -- Configurtaion of floating window is done in the individual source sections.
   -- "NC" is a special style that works well with NormalNC set
-  close_floats_on_escape_key = true,
   default_source = "filesystem",
   enable_diagnostics = true,
   enable_git_status = true,
@@ -469,7 +466,7 @@ local config = {
     --end,
     group_empty_dirs = false, -- when true, empty folders will be grouped together
     search_limit = 50, -- max number of search results when using filters
-    follow_current_file = false, -- This will find and focus the file in the active buffer every time
+    follow_current_file = { enable = false }, -- This will find and focus the file in the active buffer every time
     -- the current file is changed while the tree is open.
     hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
     -- in whatever position is specified in window.position
@@ -481,7 +478,7 @@ local config = {
   },
   buffers = {
     bind_to_cwd = true,
-    follow_current_file = true, -- This will find and focus the file in the active buffer every time
+    follow_current_file = { enable = true }, -- This will find and focus the file in the active buffer every time
     -- the current file is changed while the tree is open.
     group_empty_dirs = true, -- when true, empty directories will be grouped together
     window = {

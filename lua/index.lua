@@ -47,14 +47,6 @@ return {
       dofile(vim.g.base46_cache .. "blankline")
     end,
   },
-  -- file managing , picker etc
-  {
-    "nvim-tree/nvim-tree.lua",
-    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    opts = function()
-      return require "nvchad.configs.nvimtree"
-    end,
-  },
   -- git stuff
   {
     "lewis6991/gitsigns.nvim",
