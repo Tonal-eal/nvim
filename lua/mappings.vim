@@ -75,9 +75,9 @@ map <C-q> <C-w>q
 vnoremap <M-l> :normal gvdp<cr>`[v`]
 vnoremap <M-h> :normal gvdhP<cr>`[v`]
 
-nmap <leader>ff <Plug>SnipRun
-nmap <leader>f <Plug>SnipRunOperator
-vmap  <leader>f <Plug>SnipRun
+nmap <leader>rf <Plug>SnipRun
+nmap <leader>r <Plug>SnipRunOperator
+vmap  <leader>r <Plug>SnipRun
 
 nnoremap <silent> <leader>m :<c-u>lua require("harpoon.mark").add_file()<CR>
 nnoremap <silent> <Space>m :<c-u>lua require("harpoon.ui").toggle_quick_menu()<CR>
